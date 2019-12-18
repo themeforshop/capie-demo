@@ -57,7 +57,7 @@ $(document).ready(function(){
 
   //===== Scroll Function =====//
   $(function() {
-    $('nav.one-page-func > ul > li > a,.rspnsv-mnu > ul > li > a,.clk-scrl').on('click',function() {
+    $('[data-href-scroll]').on('click',function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
